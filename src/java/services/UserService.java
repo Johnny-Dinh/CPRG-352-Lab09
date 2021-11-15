@@ -19,13 +19,14 @@ public class UserService {
     }
     
     public void insert(String email, int active, String firstName, String lastName, String password, int role) throws Exception {
-        User user = new User(email, active, firstName, lastName, password, role);
+        User user = new User();
         UserDB noteDB = new UserDB();
+        //User user = userDB.get();
         noteDB.insert(user);
     }
     
     public void update(String email, int active, String firstName, String lastName, String password, int role) throws Exception {
-        User user = new User(email, active, firstName, lastName, password, role);
+        User user = new User();
         UserDB userDB = new UserDB();
         userDB.update(user);
     }
